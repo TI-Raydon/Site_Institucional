@@ -416,6 +416,26 @@
             formatPhone(this);
         });
     </script>
+
+<script src="https://unpkg.com/@botpoison/browser" async></script>
+<script>
+  (async () => {
+    const form = document.querySelector("form");
+    const botpoison = new Botpoison({
+      publicKey: "pk_f6d7bcc3-d122-43d7-9b63-a687ddfa00ec"
+    });
+
+    form.addEventListener("submit", async (event) => {
+      const { solution } = await botpoison.challenge();
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = "_botpoison";
+      input.value = solution;
+      form.appendChild(input);
+    });
+  })();
+</script>
+
 </body>
 </html>
 
