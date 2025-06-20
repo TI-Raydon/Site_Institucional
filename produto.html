@@ -370,25 +370,25 @@
                         Veja o Raydon em ação e descubra como ele pode transformar sua empresa
                     </p>
                     
-                    <form class="demo__form">
+                    <form class="demo__form" action="https://submit-form.com/dIi3jYhHP" method="POST">
                         <div class="form__group">
-                            <input type="text" class="form__input" placeholder="Nome completo" required>
+                            <input type="text" name="nome" class="form__input" placeholder="Nome completo" required>
                         </div>
                         
                         <div class="form__group">
-                            <input type="email" class="form__input" placeholder="Email empresarial" required>
+                            <input type="email" name="email" class="form__input" placeholder="Email empresarial" required>
                         </div>
                         
                         <div class="form__group">
-                            <input type="tel" class="form__input" placeholder="Telefone" required>
+                            <input type="tel" name="telefone" class="form__input" placeholder="Telefone" required>
                         </div>
                         
                         <div class="form__group">
-                            <input type="text" class="form__input" placeholder="Empresa" required>
+                            <input type="text" name="empresa" class="form__input" placeholder="Empresa" required>
                         </div>
                         
                         <div class="form__group">
-                            <select class="form__input" required>
+                            <select name"colaboradores" class="form__input" required>
                                 <option value="">Número de funcionários</option>
                                 <option value="1-10">1-10</option>
                                 <option value="11-50">11-50</option>
@@ -396,7 +396,7 @@
                                 <option value="200+">200+</option>
                             </select>
                         </div>
-                        
+                        <input type="hidden" name="_redirect" value="https://www.raydon.com.br/obrigado.html">
                         <button type="submit" class="btn btn--primary btn--large">
                             Solicitar Demonstração
                         </button>
@@ -457,6 +457,26 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
+
+<script src="https://unpkg.com/@botpoison/browser" async></script>
+<script>
+  (async () => {
+    const form = document.querySelector("form");
+    const botpoison = new Botpoison({
+      publicKey: "pk_f6d7bcc3-d122-43d7-9b63-a687ddfa00ec"
+    });
+
+    form.addEventListener("submit", async (event) => {
+      const { solution } = await botpoison.challenge();
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = "_botpoison";
+      input.value = solution;
+      form.appendChild(input);
+    });
+  })();
+</script>
+
 </body>
 </html>
 
