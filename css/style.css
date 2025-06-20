@@ -1525,3 +1525,16 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+  .nav__actions {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .btn.btn--primary {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+  }
+}
