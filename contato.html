@@ -25,8 +25,7 @@
         <nav class="nav container">
             <div class="nav__brand">
                 <h2 class="nav__logo">
-					  <img src="images\logo\76.png" alt="Raydon" style="height: 40px; vertical-align: middle;">
-					  <span style="margin-left: 8px;">Raydon</span>
+					  <img src="images/logo/76.png" alt="Raydon" style="height: 55px; vertical-align: middle;">
 				</h2>
             </div>
             
@@ -173,9 +172,23 @@
                                     </svg>
                                 </div>
                                 <div class="contact__info-content">
-                                    <h4>Telefone</h4>
-                                    <p>(11) 97477-5149</p>
-                                </div>
+								  <h4>Telefone</h4>
+								  <p>
+									<a
+									  href="https://wa.me/5511974775149"
+									  target="_blank"
+									  rel="noopener noreferrer"
+									  class="contact__whatsapp-link"
+									>
+									  <img
+										src="images/social/wa.png"
+										alt="WhatsApp"
+										class="contact__whatsapp-icon"
+									  >
+									  (11) 97477-5149
+									</a>
+								  </p>
+								</div>
                             </div>
                             
                             <div class="contact__info-item">
@@ -348,8 +361,8 @@
                     <div class="footer__group">
                         <h4 class="footer__title">Suporte</h4>
                         <ul class="footer__list">
-                            <li><a href="#" class="footer__link">Documentação</a></li>
-                            <li><a href="#" class="footer__link">FAQ</a></li>
+                            <li><a href="documentacao.html#termos" class="footer__link">Termos de uso</a></li>
+                            <li><a href="documentacao.html#politica" class="footer__link">Política de privacidade</a></li>
                             <li><a href="contato.html" class="footer__link">Suporte</a></li>
                         </ul>
                     </div>
@@ -358,7 +371,21 @@
                         <h4 class="footer__title">Contato</h4>
                         <ul class="footer__list">
                             <li class="footer__link">contato@raydon.com.br</li>
-                            <li class="footer__link">(11) 97477-5149</li>
+                            <li>
+							  <a
+								href="https://wa.me/5511974775149"
+								class="footer__link"
+								target="_blank"
+								rel="noopener noreferrer"
+							  >
+								<img
+								  src="images/social/wa.png"
+								  alt="WhatsApp"
+								  class="footer__social-icon"
+								>
+								(11) 97477-5149
+							  </a>
+							</li>
                         </ul>
                     </div>
                 </div>
@@ -417,9 +444,10 @@
         });
     </script>
 
-<script src="https://unpkg.com/@botpoison/browser" async></script>
+<script src="https://unpkg.com/@botpoison/browser"></script>
+
 <script>
-  (async () => {
+  window.addEventListener('load', () => {
     const form = document.querySelector("form");
     const botpoison = new Botpoison({
       publicKey: "pk_f6d7bcc3-d122-43d7-9b63-a687ddfa00ec"
@@ -433,8 +461,9 @@
       input.value = solution;
       form.appendChild(input);
     });
-  })();
+  });
 </script>
+
 
 </body>
 </html>
