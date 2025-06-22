@@ -1506,6 +1506,19 @@ body {
     line-height: 1.6;
     margin: 0;
 }
+.contact__whatsapp-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.contact__whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit; /* herda cor do texto */
+}
 
 /* Responsive adjustments for new pages */
 @media (max-width: 768px) {
